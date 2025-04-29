@@ -23,7 +23,7 @@
 			<div class="col-md-12">
 				<div class="post post-single">
 					<div class="post-thumb">
-						<img class="img-responsive" src="{{ asset('assets/images/blog/blog-post-1.jpg') }}" alt="">
+						<img class="img-responsive" src="{{ asset('assets/web/images/blog/blog-post-1.jpg') }}" alt="">
 					</div>
 					<h2 class="post-title">How To Wear Bright Shoes</h2>
 					<div class="post-meta">
@@ -75,7 +75,7 @@
 				    	<h3 class="post-sub-heading">10 Comments</h3>
 				    	<ul class="media-list comments-list m-bot-50 clearlist">
                             <x-reviews/>
-					
+
 						</ul>
 				    </div>
 

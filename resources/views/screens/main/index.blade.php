@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="hero-slider">
-  <div class="slider-item th-fullpage hero-area" style="background-image: url({{ asset('assets/images/slider/slider-1.jpg') }});">
+  <div class="slider-item th-fullpage hero-area" style="background-image: url({{ asset('assets/web/images/slider/slider-1.jpg') }});">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 text-center">
@@ -15,7 +15,7 @@
       </div>
     </div>
   </div>
-  <div class="slider-item th-fullpage hero-area" style="background-image: url({{ asset('assets/images/slider/slider-3.jpg') }});">
+  <div class="slider-item th-fullpage hero-area" style="background-image: url({{ asset('assets/web/images/slider/slider-3.jpg') }});">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 text-left">
@@ -26,7 +26,7 @@
       </div>
     </div>
   </div>
-  <div class="slider-item th-fullpage hero-area" style="background-image: url({{ asset('assets/images/slider/slider-2.jpg') }});">
+  <div class="slider-item th-fullpage hero-area" style="background-image: url({{ asset('assets/web/images/slider/slider-2.jpg') }});">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 text-right">
@@ -50,7 +50,7 @@
 			<div class="col-md-6">
 				<div class="category-box">
 					<a href="#!">
-						<img src="{{ asset('assets/images/shop/category/category-1.jpg') }}" alt="" />
+						<img src="{{ asset('assets/web/images/shop/category/category-1.jpg') }}" alt="" />
 						<div class="content">
 							<h3>Clothes Sales</h3>
 							<p>Shop New Season Clothing</p>
@@ -59,7 +59,7 @@
 				</div>
 				<div class="category-box">
 					<a href="#!">
-						<img src="{{ asset('assets/images/shop/category/category-2.jpg') }}" alt="" />
+						<img src="{{ asset('assets/web/images/shop/category/category-2.jpg') }}" alt="" />
 						<div class="content">
 							<h3>Smart Casuals</h3>
 							<p>Get Wide Range Selection</p>
@@ -70,7 +70,7 @@
 			<div class="col-md-6">
 				<div class="category-box category-box-2">
 					<a href="#!">
-						<img src="{{ asset('assets/images/shop/category/category-3.jpg') }}" alt="" />
+						<img src="{{ asset('assets/web/images/shop/category/category-3.jpg') }}" alt="" />
 						<div class="content">
 							<h3>Jewellery</h3>
 							<p>Special Design Comes First</p>
@@ -91,23 +91,23 @@
 		</div>
 		<div class="row">
 
-            <x-product name="Abcd" price="200"/>
-            <x-product/>
-             <x-product/>
-            <x-product/>
-            <x-product/>
-            <x-product/>
-            <x-product/>
-            <x-product/>
-            <x-product/>
-            <x-product/>
-            <x-product/>
-            <x-product/>
-            <x-product/>
+            <x-product  name="Abcd" price="200"/>
+            <x-product />
+            <x-product />
+            <x-product />
+            <x-product />
+            <x-product />
+            <x-product />
+            <x-product />
+            <x-product />
+            <x-product />
+            <x-product />
+            <x-product />
+            <x-product />
 			{{-- <div class="col-md-4">
 				<div class="product-item">
 					<div class="product-thumb">
-						<img class="img-responsive" src="{{ asset('assets/images/shop/products/product-2.jpg') }}" alt="product-img" />
+						<img class="img-responsive" src="{{ asset('assets/web/images/shop/products/product-2.jpg') }}" alt="product-img" />
 						<div class="preview-meta">
 							<ul>
 								<li>
@@ -133,7 +133,7 @@
 			<div class="col-md-4">
 				<div class="product-item">
 					<div class="product-thumb">
-						<img class="img-responsive" src="{{ asset('assets/images/shop/products/product-3.jpg') }}" alt="product-img" />
+						<img class="img-responsive" src="{{ asset('assets/web/images/shop/products/product-3.jpg') }}" alt="product-img" />
 						<div class="preview-meta">
 							<ul>
 								<li>
@@ -159,7 +159,7 @@
 			<div class="col-md-4">
 				<div class="product-item">
 					<div class="product-thumb">
-						<img class="img-responsive" src="{{ asset('assets/images/shop/products/product-4.jpg') }}" alt="product-img" />
+						<img class="img-responsive" src="{{ asset('assets/web/images/shop/products/product-4.jpg') }}" alt="product-img" />
 						<div class="preview-meta">
 							<ul>
 								<li>
@@ -185,7 +185,7 @@
 			<div class="col-md-4">
 				<div class="product-item">
 					<div class="product-thumb">
-						<img class="img-responsive" src="{{ asset('assets/images/shop/products/product-5.jpg') }}" alt="product-img" />
+						<img class="img-responsive" src="{{ asset('assets/web/images/shop/products/product-5.jpg') }}" alt="product-img" />
 						<div class="preview-meta">
 							<ul>
 								<li>
@@ -211,7 +211,7 @@
 			<div class="col-md-4">
 				<div class="product-item">
 					<div class="product-thumb">
-						<img class="img-responsive" src="{{ asset('assets/images/shop/products/product-6.jpg') }}" alt="product-img" />
+						<img class="img-responsive" src="{{ asset('assets/web/images/shop/products/product-6.jpg') }}" alt="product-img" />
 						<div class="preview-meta">
 							<ul>
 								<li>
@@ -238,7 +238,7 @@
 				<div class="product-item">
 					<div class="product-thumb">
 						<span class="bage">Sale</span>
-						<img class="img-responsive" src="{{ asset('assets/images/shop/products/product-7.jpg') }}" alt="product-img" />
+						<img class="img-responsive" src="{{ asset('assets/web/images/shop/products/product-7.jpg') }}" alt="product-img" />
 						<div class="preview-meta">
 							<ul>
 								<li>
@@ -264,7 +264,7 @@
 			<div class="col-md-4">
 				<div class="product-item">
 					<div class="product-thumb">
-						<img class="img-responsive" src="{{ asset('assets/images/shop/products/product-8.jpg') }}" alt="product-img" />
+						<img class="img-responsive" src="{{ asset('assets/web/images/shop/products/product-8.jpg') }}" alt="product-img" />
 						<div class="preview-meta">
 							<ul>
 								<li>
@@ -290,7 +290,7 @@
 			<div class="col-md-4">
 				<div class="product-item">
 					<div class="product-thumb">
-						<img class="img-responsive" src="{{ asset('assets/images/shop/products/product-9.jpg') }}" alt="product-img" />
+						<img class="img-responsive" src="{{ asset('assets/web/images/shop/products/product-9.jpg') }}" alt="product-img" />
 						<div class="preview-meta">
 							<ul>
 								<li>
@@ -325,7 +325,7 @@
 			        	<div class="row">
 			        		<div class="col-md-8 col-sm-6 col-xs-12">
 			        			<div class="modal-image">
-				        			<img class="img-responsive" src="{{ asset('assets/images/shop/products/modal-product.jpg') }}" alt="product-img" />
+				        			<img class="img-responsive" src="{{ asset('assets/web/images/shop/products/modal-product.jpg') }}" alt="product-img" />
 			        			</div>
 			        		</div>
 			        		<div class="col-md-4 col-sm-6 col-xs-12">

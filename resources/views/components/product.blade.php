@@ -1,14 +1,15 @@
 @props([
     'name'=>'defg',
-    'price'=>'456'
+    'price'=>'456',
+    'column' => '4'
 ])
 
 
-<div class="col-md-4">
+<div class="col-md-{{ $column }}">
     <div class="product-item">
         <div class="product-thumb">
             <span class="bage">Sale</span>
-            <img class="img-responsive" src="{{ asset('assets/images/shop/products/product-1.jpg') }}" alt="product-img" />
+            <img class="img-responsive" src="{{ asset('assets/web/images/shop/products/product-1.jpg') }}" alt="product-img" />
             <div class="preview-meta">
                 <ul>
                     <li>

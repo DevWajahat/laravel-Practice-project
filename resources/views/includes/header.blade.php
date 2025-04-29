@@ -11,7 +11,7 @@
 			<div class="col-md-4 col-xs-12 col-sm-4">
 				<!-- Site Logo -->
 				<div class="logo text-center">
-					<a href="index.html">
+					<a href="{{ route('home') }}">
 						<!-- replace logo here -->
 						<svg width="135px" height="29px" viewBox="0 0 155 29" version="1.1" xmlns="http://www.w3.org/2000/svg"
 							xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -37,7 +37,7 @@
 							<!-- Cart Item -->
 							<div class="media">
 								<a class="pull-left" href="#!">
-									<img class="media-object" src="{{ asset('assets/images/shop/cart/cart-1.jpg') }}" alt="image" />
+									<img class="media-object" src="{{ asset('assets/web/images/shop/cart/cart-1.jpg') }}" alt="image" />
 								</a>
 								<div class="media-body">
 									<h4 class="media-heading"><a href="#!">Ladies Bag</a></h4>
@@ -52,7 +52,7 @@
 							<!-- Cart Item -->
 							<div class="media">
 								<a class="pull-left" href="#!">
-									<img class="media-object" src="{{ asset('assets/images/shop/cart/cart-2.jpg') }}" alt="image" />
+									<img class="media-object" src="{{ asset('assets/web/images/shop/cart/cart-2.jpg') }}" alt="image" />
 								</a>
 								<div class="media-body">
 									<h4 class="media-heading"><a href="#!">Ladies Bag</a></h4>
@@ -207,8 +207,8 @@
 									<ul>
 										<li class="dropdown-header">Utility</li>
 										<li role="separator" class="divider"></li>
-										<li><a href="login.html">Login Page</a></li>
-										<li><a href="signin.html">Signin Page</a></li>
+										<li><a href="{{ route('signin') }}">Login Page</a></li>
+										<li><a href="{{ route('signup') }}">Signin Page</a></li>
 										<li><a href="forget-password.html">Forget Password</a></li>
 									</ul>
 								</div>
@@ -216,7 +216,7 @@
 								<!-- Mega Menu -->
 								<div class="col-sm-3 col-xs-12">
 									<a href="shop.html">
-										<img class="img-responsive" src="{{ asset('assets/images/shop/header-img.jpg') }}" alt="menu image" />
+										<img class="img-responsive" src="{{ asset('assets/web/images/shop/header-img.jpg') }}" alt="menu image" />
 									</a>
 								</div>
 							</div><!-- / .row -->

@@ -4,9 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class CartController extends Controller
+class cartController extends Controller
 {
-    function index() {
-        return view('screens.cart');
+    function index()
+    {
+        return view('screens.cart.index');
     }
 }

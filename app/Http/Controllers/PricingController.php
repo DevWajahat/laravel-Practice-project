@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class PricingController extends Controller
 {
        function index() {
-           return view('screens.pricing');
+           return view('screens.products.pricing');
        }
 }

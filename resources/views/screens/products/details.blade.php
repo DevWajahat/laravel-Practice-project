@@ -26,23 +26,23 @@
 							<!-- me art lab slider -->
 							<div class='carousel-inner '>
 								<div class='item active'>
-									<img src='{{ asset('assets/images/shop/single-products/product-1.jpg') }}' alt='' data-zoom-image="images/shop/single-products/product-1.jpg" />
+									<img src='{{ asset('assets/web/images/shop/single-products/product-1.jpg') }}' alt='' data-zoom-image="images/shop/single-products/product-1.jpg" />
 								</div>
 								<div class='item'>
-									<img src='{{ asset('assets/images/shop/single-products/product-2.jpg') }}' alt='' data-zoom-image="images/shop/single-products/product-2.jpg" />
+									<img src='{{ asset('assets/web/images/shop/single-products/product-2.jpg') }}' alt='' data-zoom-image="images/shop/single-products/product-2.jpg" />
 								</div>
 
 								<div class='item'>
-									<img src='{{ asset('assets/images/shop/single-products/product-3.jpg') }}' alt='' data-zoom-image="images/shop/single-products/product-3.jpg" />
+									<img src='{{ asset('assets/web/images/shop/single-products/product-3.jpg') }}' alt='' data-zoom-image="images/shop/single-products/product-3.jpg" />
 								</div>
 								<div class='item'>
-									<img src='{{ asset('assets/images/shop/single-products/product-4.jpg') }}' alt='' data-zoom-image="images/shop/single-products/product-4.jpg" />
+									<img src='{{ asset('assets/web/shop/single-products/product-4.jpg') }}' alt='' data-zoom-image="images/shop/single-products/product-4.jpg" />
 								</div>
 								<div class='item'>
-									<img src='{{ asset('assets/images/shop/single-products/product-5.jpg') }}' alt='' data-zoom-image="images/shop/single-products/product-5.jpg" />
+									<img src='{{ asset('assets/web/images/shop/single-products/product-5.jpg') }}' alt='' data-zoom-image="images/shop/single-products/product-5.jpg" />
 								</div>
 								<div class='item'>
-									<img src='{{ asset('assets/images/shop/single-products/product-6.jpg') }}' alt='' data-zoom-image="images/shop/single-products/product-6.jpg" />
+									<img src='{{ asset('assets/web/images/shop/single-products/product-6.jpg') }}' alt='' data-zoom-image="images/shop/single-products/product-6.jpg" />
 								</div>
 
 							</div>
@@ -59,25 +59,25 @@
 						<!-- thumb -->
 						<ol class='carousel-indicators mCustomScrollbar meartlab'>
 							<li data-target='#carousel-custom' data-slide-to='0' class='active'>
-								<img src='{{ asset('assets/images/shop/single-products/product-1.jpg') }}' alt='' />
+								<img src='{{ asset('assets/web/images/shop/single-products/product-1.jpg') }}' alt='' />
 							</li>
 							<li data-target='#carousel-custom' data-slide-to='1'>
-								<img src="{{ asset('assets/images/shop/single-products/product-2.jpg') }}" alt='' />
+								<img src="{{ asset('assets/web/images/shop/single-products/product-2.jpg') }}" alt='' />
 							</li>
 							<li data-target='#carousel-custom' data-slide-to='2'>
-								<img src="{{ asset('assets/images/shop/single-products/product-3.jpg') }}" alt='' />
+								<img src="{{ asset('assets/web/images/shop/single-products/product-3.jpg') }}" alt='' />
 							</li>
 							<li data-target='#carousel-custom' data-slide-to='3'>
-								<img src="{{ asset('assets/images/shop/single-products/product-4.jpg') }}" alt='' />
+								<img src="{{ asset('assets/web/images/shop/single-products/product-4.jpg') }}" alt='' />
 							</li>
 							<li data-target='#carousel-custom' data-slide-to='4'>
-								<img src="{{ asset('assets/images/shop/single-products/product-5.jpg') }}" alt='' />
+								<img src="{{ asset('assets/web/images/shop/single-products/product-5.jpg') }}" alt='' />
 							</li>
 							<li data-target='#carousel-custom' data-slide-to='5'>
-								<img src="{{ asset('assets/images/shop/single-products/product-6.jpg') }}" alt='' />
+								<img src="{{ asset('assets/web/images/shop/single-products/product-6.jpg') }}" alt='' />
 							</li>
 							<li data-target='#carousel-custom' data-slide-to='6'>
-								<img src="{{ asset('assets/images/shop/single-products/product-7.jpg') }}" alt='' />
+								<img src="{{ asset('assets/web/images/shop/single-products/product-7.jpg') }}" alt='' />
 							</li>
 						</ol>
 					</div>
@@ -149,56 +149,7 @@
 							<div class="post-comments">
 						    	<ul class="media-list comments-list m-bot-50 clearlist">
                                     <x-reviews/>
-								    <!-- Comment Item start-->
-								    <li class="media">
 
-								        <a class="pull-left" href="#!">
-								            <img class="media-object comment-avatar" src="{{ asset('assets/images/blog/avater-4.jpg') }}" alt="" width="50" height="50" />
-								        </a>
-
-								        <div class="media-body">
-
-								            <div class="comment-info">
-								                <div class="comment-author">
-								                    <a href="#!">Jonathon Andrew</a>
-								                </div>
-								                <time datetime="2013-04-06T13:53">July 02, 2015, at 11:34</time>
-								                <a class="comment-button" href="#!"><i class="tf-ion-chatbubbles"></i>Reply</a>
-								            </div>
-
-								            <p>
-								                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at magna ut ante eleifend eleifend. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni natus, nostrum iste non delectus atque ab a accusantium optio, dolor!
-								            </p>
-
-								        </div>
-
-								    </li>
-								    <!-- End Comment Item -->
-
-								    <!-- Comment Item start-->
-								    <li class="media">
-
-								        <a class="pull-left" href="#!">
-								            <img class="media-object comment-avatar" src="{{ asset('assets/images/blog/avater-1.jpg') }}" alt="" width="50" height="50">
-								        </a>
-
-								        <div class="media-body">
-
-								            <div class="comment-info">
-								                <div class="comment-author">
-								                    <a href="#!">Jonathon Andrew</a>
-								                </div>
-								                <time datetime="2013-04-06T13:53">July 02, 2015, at 11:34</time>
-								                <a class="comment-button" href="#!"><i class="tf-ion-chatbubbles"></i>Reply</a>
-								            </div>
-
-								            <p>
-								                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at magna ut ante eleifend eleifend.
-								            </p>
-
-								        </div>
-
-								    </li>
 							</ul>
 							</div>
 						</div>
@@ -216,111 +167,10 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-3">
-				<div class="product-item">
-					<div class="product-thumb">
-						<span class="bage">Sale</span>
-						<img class="img-responsive" src="{{ asset('assets/images/shop/products/product-5.jpg') }}" alt="product-img" />
-						<div class="preview-meta">
-							<ul>
-								<li>
-									<span  data-toggle="modal" data-target="#product-modal">
-										<i class="tf-ion-ios-search"></i>
-									</span>
-								</li>
-								<li>
-			                        <a href="#" ><i class="tf-ion-ios-heart"></i></a>
-								</li>
-								<li>
-									<a href="#!"><i class="tf-ion-android-cart"></i></a>
-								</li>
-							</ul>
-                      	</div>
-					</div>
-					<div class="product-content">
-						<h4><a href="{{ route('singleProduct') }}">Reef Boardsport</a></h4>
-						<p class="price">$200</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="product-item">
-					<div class="product-thumb">
-						<img class="img-responsive" src="{{ asset('assets/images/shop/products/product-1.jpg') }}" alt="product-img" />
-						<div class="preview-meta">
-							<ul>
-								<li>
-									<span  data-toggle="modal" data-target="#product-modal">
-										<i class="tf-ion-ios-search-strong"></i>
-									</span>
-								</li>
-								<li>
-			                        <a href="#" ><i class="tf-ion-ios-heart"></i></a>
-								</li>
-								<li>
-									<a href="#!"><i class="tf-ion-android-cart"></i></a>
-								</li>
-							</ul>
-                      	</div>
-					</div>
-					<div class="product-content">
-						<h4><a href="{{ route('singleProduct') }}">Rainbow Shoes</a></h4>
-						<p class="price">$200</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="product-item">
-					<div class="product-thumb">
-						<img class="img-responsive" src="{{ asset('assets/images/shop/products/product-2.jpg') }}" alt="product-img" />
-						<div class="preview-meta">
-							<ul>
-								<li>
-									<span  data-toggle="modal" data-target="#product-modal">
-										<i class="tf-ion-ios-search"></i>
-									</span>
-								</li>
-								<li>
-			                        <a href="#" ><i class="tf-ion-ios-heart"></i></a>
-								</li>
-								<li>
-									<a href="#!"><i class="tf-ion-android-cart"></i></a>
-								</li>
-							</ul>
-                      	</div>
-					</div>
-					<div class="product-content">
-						<h4><a href="{{ route('singleProduct') }}">Strayhorn SP</a></h4>
-						<p class="price">$230</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="product-item">
-					<div class="product-thumb">
-						<img class="img-responsive" src="{{ asset('assets/images/shop/products/product-3.jpg') }}" alt="product-img" />
-						<div class="preview-meta">
-							<ul>
-								<li>
-									<span  data-toggle="modal" data-target="#product-modal">
-										<i class="tf-ion-ios-search"></i>
-									</span>
-								</li>
-								<li>
-			                        <a href="#" ><i class="tf-ion-ios-heart"></i></a>
-								</li>
-								<li>
-									<a href="#!"><i class="tf-ion-android-cart"></i></a>
-								</li>
-							</ul>
-                      	</div>
-					</div>
-					<div class="product-content">
-						<h4><a href="{{ route('singleProduct') }}">Bradley Mid</a></h4>
-						<p class="price">$200</p>
-					</div>
-				</div>
-			</div>
+			<x-product column="3"/>
+            <x-product column="3"/>
+            <x-product column="3"/>
+            <x-product column="3"/>
 
 		</div>
 	</div>
@@ -339,7 +189,7 @@
 	        	<div class="row">
 	        		<div class="col-md-8">
 	        			<div class="modal-image">
-		        			<img class="img-responsive" src="{{ asset('assets/images/shop/products/modal-product.jpg') }}" />
+		        			<img class="img-responsive" src="{{ asset('assets/web/images/shop/products/modal-product.jpg') }}" />
 	        			</div>
 	        		</div>
 	        		<div class="col-md-3">

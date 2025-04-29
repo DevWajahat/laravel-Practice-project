@@ -1,7 +1,7 @@
 <div class="post">
 	<div class="post-media post-thumb">
 		<a href="{{ route('blogsArticle') }}">
-			<img src="{{ asset('assets/images/blog/blog-post-1.jpg') }}" alt="">
+			<img src="{{ asset('assets/web/images/blog/blog-post-1.jpg') }}" alt="">
 		</a>
 	</div>
 	<h2 class="post-title"><a href="{{ route('blogsArticle') }}">How To Wear Bright Shoes</a></h2>

@@ -67,7 +67,7 @@
                                  <label for="card-cvc">Card Code <span class="required">*</span></label>
                                  <input id="card-cvc" class="form-control"  type="tel" maxlength="4" placeholder="CVC" >
                               </div>
-                              <a href="confirmation.html" class="btn btn-main mt-20">Place Order</a >
+                              <a href="{{ route('confirmation') }}" class="btn btn-main mt-20">Place Order</a >
                            </form>
                         </div>
                      </div>
@@ -80,7 +80,7 @@
                      <h4 class="widget-title">Order Summary</h4>
                      <div class="media product-card">
                         <a class="pull-left" href="product-single.html">
-                           <img class="media-object" src="images/shop/cart/cart-1.jpg" alt="Image" />
+                           <img class="media-object" src="{{ asset('assets/web/images/shop/cart/cart-1.jpg') }}" alt="Image" />
                         </a>
                         <div class="media-body">
                            <h4 class="media-heading"><a href="product-single.html">Ambassador Heritage 1921</a></h4>
@@ -106,7 +106,7 @@
                         <span>$250</span>
                      </div>
                      <div class="verified-icon">
-                        <img src="images/shop/verified.png">
+                        <img src="{{ asset('assets/web/images/shop/verified.png') }}">
                      </div>
                   </div>
                </div>

@@ -1,7 +1,7 @@
 <div class="media">
 
     <a class="pull-left" href="#!">
-        <img class="media-object comment-avatar" src="{{ asset('assets/images/blog/avater-2.jpg') }}" alt="" width="50" height="50">
+        <img class="media-object comment-avatar" src="{{ asset('assets/web/images/blog/avater-2.jpg') }}" alt="" width="50" height="50">
     </a>
 
     <div class="media-body">
@@ -17,7 +17,7 @@
         <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at magna ut ante eleifend eleifend.
         </p>
-        
+
     </div>
 
 </div>

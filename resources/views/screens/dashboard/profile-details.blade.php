@@ -29,7 +29,7 @@
         <div class="dashboard-wrapper dashboard-user-profile">
           <div class="media">
             <div class="pull-left text-center" href="#!">
-              <img class="media-object user-img" src="{{ asset('assets/images/avater.jpg') }}" alt="Image">
+              <img class="media-object user-img" src="{{ asset('assets/web/images/avater.jpg') }}" alt="Image">
               <a href="#x" class="btn btn-transparent mt-20">Change Image</a>
             </div>
             <div class="media-body">

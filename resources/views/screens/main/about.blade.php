@@ -22,7 +22,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6">
-				<img class="img-responsive" src="{{ asset('assets/images/about/about.jpg') }}">
+				<img class="img-responsive" src="{{ asset('assets/web/images/about/about.jpg') }}">
 			</div>
 			<div class="col-md-6">
 				<h2 class="mt-40">About Our Shop</h2>
@@ -34,16 +34,16 @@
 		</div>
 		<div class="row mt-40">
 			<div class="col-md-3 text-center">
-				<img src="{{ asset('assets/images/about/awards-logo.png') }}">
+				<img src="{{ asset('assets/web/images/about/awards-logo.png') }}">
 			</div>
 			<div class="col-md-3 text-center">
-				<img src="{{ asset('assets/images/about/awards-logo.png') }}">
+				<img src="{{ asset('assets/web/images/about/awards-logo.png') }}">
 			</div>
 			<div class="col-md-3 text-center">
-				<img src="{{ asset('assets/images/about/awards-logo.png') }}">
+				<img src="{{ asset('assets/web/images/about/awards-logo.png') }}">
 			</div>
 			<div class="col-md-3 text-center">
-				<img src="{{ asset('assets/images/about/awards-logo.png') }}">
+				<img src="{{ asset('assets/web/images/about/awards-logo.png') }}">
 			</div>
 		</div>
 	</div>
@@ -56,28 +56,28 @@
 		<div class="row">
 			<div class="col-md-3">
 				<div class="team-member text-center">
-					<img class="img-circle" src="{{ asset('assets/images/team/team-1.jpg') }}">
+					<img class="img-circle" src="{{ asset('assets/web/images/team/team-1.jpg') }}">
 					<h4>Jonathon Andrew</h4>
 					<p>Founder</p>
 				</div>
 			</div>
 			<div class="col-md-3">
 				<div class="team-member text-center">
-					<img class="img-circle" src="{{ asset('assets/images/team/team-2.jpg') }}">
+					<img class="img-circle" src="{{ asset('assets/web/images/team/team-2.jpg') }}">
 					<h4>Adipisci Velit</h4>
 					<p>Developer</p>
 				</div>
 			</div>
 			<div class="col-md-3">
 				<div class="team-member text-center">
-					<img class="img-circle" src="{{ asset('assets/images/team/team-3.jpg') }}">
+					<img class="img-circle" src="{{ asset('assets/web/images/team/team-3.jpg') }}">
 					<h4>John Fexit</h4>
 					<p>Shop Manager</p>
 				</div>
 			</div>
 			<div class="col-md-3">
 				<div class="team-member text-center">
-					<img class="img-circle" src="{{ asset('assets/images/team/team-1.jpg') }}">
+					<img class="img-circle" src="{{ asset('assets/web/images/team/team-1.jpg') }}">
 					<h4>John Fexit</h4>
 					<p>Shop Manager</p>
 				</div>

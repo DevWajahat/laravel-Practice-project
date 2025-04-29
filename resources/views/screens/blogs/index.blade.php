@@ -8,7 +8,7 @@
 				<div class="content">
 					<h1 class="page-name">Blog</h1>
 					<ol class="breadcrumb">
-						<li><a href="index.html">Home</a></li>
+						<li><a href="{{ route('home') }}">Home</a></li>
 						<li class="active">blog</li>
 					</ol>
 				</div>

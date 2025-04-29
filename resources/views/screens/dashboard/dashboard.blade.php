@@ -30,7 +30,7 @@
 				<div class="dashboard-wrapper user-dashboard">
 					<div class="media">
 						<div class="pull-left">
-							<img class="media-object user-img" src="{{ asset('assets/images/avater.jpg') }}" alt="Image">
+							<img class="media-object user-img" src="{{ asset('assets/web/images/avater.jpg') }}" alt="Image">
 						</div>
 						<div class="media-body">
 							<h2 class="media-heading">Welcome Adam Smith</h2>
@@ -53,7 +53,7 @@
 								</thead>
 								<tbody>
 									<x-dashboard-details/>
-							
+
 								</tbody>
 							</table>
 						</div>
