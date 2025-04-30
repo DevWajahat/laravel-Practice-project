@@ -33,7 +33,7 @@ return new class extends Migration
     public function down(): void
     {
         Schema::dropIfExists('users', function (Blueprint $table) {
-            $table->dropColumn(['password','city','phone','date_of_birth','image']);
+            $table->dropColumn(['city','phone','date_of_birth','image']);
         });
     }
 };
