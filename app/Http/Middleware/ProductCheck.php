@@ -16,11 +16,11 @@ class ProductCheck
 
     public function handle(Request $request, Closure $next): Response
     {
-        $age = 14;
+        $age = 20;
         if($age < 18){
             return redirect()->route('home');
         }
         return $next($request);
-        
+
     }
 }
