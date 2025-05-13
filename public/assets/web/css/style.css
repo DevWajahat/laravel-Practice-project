@@ -10,10 +10,10 @@
 [Table of contents]
 
 1. Body
-	2. Header 
-		2.1. Navigation 
-		2.2. Menu 
-		2.3. Cart 
+	2. Header
+		2.1. Navigation
+		2.2. Menu
+		2.3. Cart
 	3. Banner
 		3.1 Revolution Slider
 	4. Products
@@ -21,7 +21,7 @@
 		4.2 Single Product
 	5. Pricing
 	6. Clients
-	7. Instagram Feed 
+	7. Instagram Feed
 	8. User Dashboard
 		8.1 User Profile
 	9. Blog
@@ -40,8 +40,8 @@
 		13.5 Empty Cart
 		13.6 Success Message
 	14.404 Page
-	15. Contact 
-		15.1  Contact Form 
+	15. Contact
+		15.1  Contact Form
 		15.2 Contact Details
 		15.3 Social Icons
 	16.Footer
@@ -1853,7 +1853,7 @@ input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, inp
 }
 
 .bg-100 {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .bg-1 {
@@ -1878,7 +1878,8 @@ input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, inp
 .bg-coming-soon {
   background: url("../images/backgrounds/coming-soon-bg.jpg");
   background-size: cover;
-  height: 100vh;
+  min-width: 100vh;
+
 }
 
 .bg-brand-identity {

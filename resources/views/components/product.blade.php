@@ -1,6 +1,7 @@
 @props([
-    'name'=>'defg',
-    'price'=>'456',
+    'id' ,
+    'name',
+    'price',
     'column' => '4'
 ])
 
@@ -27,7 +28,7 @@
               </div>
         </div>
         <div class="product-content">
-            <h4><a href="{{ route('singleProduct') }}">{{ $name }}</a></h4>
+            <h4><a href="{{ route('products.details',$id) }}">{{ $name }}</a></h4>
             <p class="price">${{ $price }}</p>
         </div>
     </div>

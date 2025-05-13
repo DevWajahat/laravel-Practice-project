@@ -1,10 +1,10 @@
 <div class="post">
 	<div class="post-media post-thumb">
-		<a href="{{ route('blogsArticle') }}">
+		<a href="{{ route('blogs.articles') }}">
 			<img src="{{ asset('assets/web/images/blog/blog-post-1.jpg') }}" alt="">
 		</a>
 	</div>
-	<h2 class="post-title"><a href="{{ route('blogsArticle') }}">How To Wear Bright Shoes</a></h2>
+	<h2 class="post-title"><a href="{{ route('blogs.articles') }}">How To Wear Bright Shoes</a></h2>
 	<div class="post-meta">
 		<ul>
 			<li>
@@ -23,7 +23,7 @@
 	</div>
 	<div class="post-content">
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit vitae placeat ad architecto nostrum asperiores vel aperiam, veniam eum nulla. Maxime cum magnam, adipisci architecto quibusdam cumque veniam fugiat quae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio vitae ab doloremque accusamus sit, eos dolorum officiis a perspiciatis aliquid. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, facere. </p>
-		<a href="{{ route('blogsArticle') }}" class="btn btn-main">Continue Reading</a>
+		<a href="{{ route('blogs.articles') }}" class="btn btn-main">Continue Reading</a>
 	</div>
 
 </div>

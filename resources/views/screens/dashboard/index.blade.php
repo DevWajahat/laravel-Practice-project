@@ -22,10 +22,10 @@
 		<div class="row">
 			<div class="col-md-12">
 				<ul class="list-inline dashboard-menu text-center">
-					<li><a class="active" href="{{ route('dashboard') }}">Dashboard</a></li>
-					<li><a href="{{ route('orders') }}">Orders</a></li>
-					<li><a href="{{ route('address') }}">Address</a></li>
-					<li><a href="{{ route('profileDetails') }}">Profile Details</a></li>
+					<li><a class="active" href="{{ route('dashboard.index') }}">Dashboard</a></li>
+					<li><a href="{{ route('dashboard.orders') }}">Orders</a></li>
+					<li><a href="{{ route('dashboard.address') }}">Address</a></li>
+					<li><a href="{{ route('dashboard.profileDetails') }}">Profile Details</a></li>
 				</ul>
 				<div class="dashboard-wrapper user-dashboard">
 					<div class="media">

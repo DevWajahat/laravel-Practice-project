@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class DashboardController extends Controller
 {
        function index() {
-           return view('screens.dashboard');
+           return view('screens.dashboard.index');
        }
        function profileDetails() {
            return view('screens.dashboard.profile-details');

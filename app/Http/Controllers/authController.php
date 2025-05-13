@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class authController extends Controller
+class AuthController extends Controller
 {
     function signup() {
         return view('screens.auth.signin');

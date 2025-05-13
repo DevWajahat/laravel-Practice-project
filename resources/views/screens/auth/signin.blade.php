@@ -8,7 +8,7 @@
             <img src="images/logo.png" alt="">
           </a>
           <h2 class="text-center">Create Your Account</h2>
-          <form class="text-left clearfix" action="index.html">
+          <form class="text-left clearfix" action="{{ route('home') }}">
             <div class="form-group">
               <input type="text" class="form-control"  placeholder="First Name">
             </div>

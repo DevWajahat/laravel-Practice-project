@@ -11,9 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('carts', function (Blueprint $table) {
-            $table->renameColumn('item_name','name');
-            $table->renameColumn('item_price','price');
+        Schema::create('comments', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('user_id')->constrained('users');
+            $table->foreignId('blog_id')->constrained('blogs');
+            $table->text('text');
+            $table->timestamps();
         });
     }
 
@@ -22,8 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('carts', function (Blueprint $table) {
-            // $table->dropColumn(['item_name','item_price']);
-        });
+        Schema::dropIfExists('comments');
     }
 };

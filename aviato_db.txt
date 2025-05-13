@@ -1,0 +1,96 @@
+categories{
+id,  name 
+1 , cloths
+2, electronics
+}
+products {
+id, category_id FK,name, price, description 
+1 , 2 ,            Samsung , 20 , ssdasdasd,
+}
+	
+product_images {
+id, product_id ,path ,
+}
+
+attributes {	
+id, name
+1 , color
+2 , size
+3 , quality
+}
+
+
+variants {
+id, attribute_id FK    ,  name,
+1 , 1 			, green/black
+2 , 1			,blue	
+}
+
+product_attributes {
+id,attribute_id, product_id
+}
+
+product_variants {
+id, variant_id,product_id,
+1,  	,1	,1
+1, 	 ,2 	,1
+}
+
+order{
+id PK, customer_id PK, total_amount, timestamp(), status,
+1 ,   1,              , total() ,              , pending
+2,    3                 , total()               , onway
+3,    1                 , total()               , delivered
+}	
+
+
+order_item{
+id PK, order_id FK, product_id, quantity, ,product_variant_id FK, product variant, price
+1,    , 1,      , 1,       , 4         ,  1                   , 3      ,  red     , 500
+2,    , 1,      , 5,       , 1          , 3                   ,  1     ,        , 440
+3,    , 2,      , 1,       , 1          ,1                    , 2       ,       , 220
+}
+
+blogs_categories{
+   id, name	   
+   1, lifestyle
+   2, travel
+   3, fasion
+}
+
+blogs{
+id, name, body       , category_id FK
+1,  Tech, sdklfjsdkl , 3
+2,  desc, sdlfkjassdf, 2
+}
+
+users{
+id, name, email      ,   password  , role(admin,dealer), 
+1, wajji, w@gmail.com,password     , admin
+}
+
+comments{
+id PK, user_id, blog_id, text
+1,   ,1      , 1      , dsafljasdfkl
+2,    , 1     , 1     , asdlfjadslfj
+3,    , 3     , 2    ,fasdfasdf
+}
+
+
+reviews{
+id PK , user_id,product_id, text
+1     , 1    ,  2        , asdlkfjasdl
+2     , 1     ,  2        , dflasdjfasdkl
+}
+carts{
+id, product_id, userid
+1, 2          , 1
+}
+
+contact_us {
+id, name, email, subject, message
+}
+
+faqs{
+id, question , answer 
+}

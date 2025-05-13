@@ -47,7 +47,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<a href="index.html">
+					<a href="{{ route('home') }}">
 						<img src="{{ asset('assets/web/images/logo.png') }}" alt="site logo" />
 					</a>
 					<h1>404</h1>

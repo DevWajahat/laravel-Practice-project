@@ -27,16 +27,16 @@
 				</ul>
 				<ul class="footer-menu text-uppercase">
 					<li>
-						<a href="{{ route('contact') }}">CONTACT</a>
+						<a href="{{ route('main.contact') }}">CONTACT</a>
 					</li>
 					<li>
-						<a href="{{ route('shop') }}">SHOP</a>
+						<a href="{{ route('products.index') }}">SHOP</a>
 					</li>
 					<li>
-						<a href="{{ route('pricing') }}">Pricing</a>
+						<a href="{{ route('main.pricing') }}">Pricing</a>
 					</li>
 					<li>
-						<a href="{{ route('contact') }}">PRIVACY POLICY</a>
+						<a href="{{ route('main.contact') }}">PRIVACY POLICY</a>
 					</li>
 				</ul>
 				<p class="copyright-text">Copyright &copy;2021, Designed &amp; Developed by <a href="https://themefisher.com/">Themefisher</a></p>
@@ -45,4 +45,3 @@
 	</div>
 </footer>
 
-   

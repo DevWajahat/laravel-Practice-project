@@ -22,21 +22,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <meta name="author" content="Themefisher">
   <meta name="generator" content="Themefisher Constra HTML Template v1.0">
-  
+
   <!-- Favicon -->
   <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
-  
+
   <!-- Themefisher Icon font -->
   <link rel="stylesheet" href="plugins/themefisher-font/style.css">
   <!-- bootstrap.min css -->
   <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
-  
+
   <!-- Animate css -->
   <link rel="stylesheet" href="plugins/animate/animate.css">
   <!-- Slick Carousel -->
   <link rel="stylesheet" href="plugins/slick/slick.css">
   <link rel="stylesheet" href="plugins/slick/slick-theme.css">
-  
+
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
 
@@ -57,7 +57,7 @@
 			<div class="col-md-4 col-xs-12 col-sm-4">
 				<!-- Site Logo -->
 				<div class="logo text-center">
-					<a href="index.html">
+					<a href="{{ route('home') }}">
 						<!-- replace logo here -->
 						<svg width="135px" height="29px" viewBox="0 0 155 29" version="1.1" xmlns="http://www.w3.org/2000/svg"
 							xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -173,7 +173,7 @@
 
 					<!-- Home -->
 					<li class="dropdown ">
-						<a href="index.html">Home</a>
+						<a href="{{ route('home') }}">Home</a>
 					</li><!-- / Home -->
 
 
@@ -579,10 +579,10 @@
 	</div>
 </footer>
 
-    <!-- 
+    <!--
     Essential Scripts
     =====================================-->
-    
+
     <!-- Main jQuery -->
     <script src="plugins/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap 3.1 -->
@@ -606,7 +606,7 @@
 
     <!-- Main Js File -->
     <script src="js/script.js"></script>
-    
+
 
 
   </body>

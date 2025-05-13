@@ -12,7 +12,7 @@
         	<i class="tf-ion-android-checkmark-circle"></i>
           <h2 class="text-center">Thank you! For your payment</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, sed.</p>
-          <a href="{{ route('shop') }}" class="btn btn-main mt-20">Continue Shopping</a>
+          <a href="{{ route('products.index') }}" class="btn btn-main mt-20">Continue Shopping</a>
         </div>
       </div>
     </div>

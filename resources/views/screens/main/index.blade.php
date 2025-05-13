@@ -10,7 +10,7 @@
         <div class="col-lg-8 text-center">
           <p data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1">PRODUCTS</p>
           <h1 data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".5">The beauty of nature <br> is hidden in details.</h1>
-          <a data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".8" class="btn" href="{{ route('shop') }}">Shop Now</a>
+          <a data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".8" class="btn" href="{{ route('products.index') }}">Shop Now</a>
         </div>
       </div>
     </div>
@@ -21,7 +21,7 @@
         <div class="col-lg-8 text-left">
           <p data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1">PRODUCTS</p>
           <h1 data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".5">The beauty of nature <br> is hidden in details.</h1>
-          <a data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".8" class="btn" href="{{ route('shop') }}">Shop Now</a>
+          <a data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".8" class="btn" href="{{ route('products.index') }}">Shop Now</a>
         </div>
       </div>
     </div>
@@ -32,7 +32,7 @@
         <div class="col-lg-8 text-right">
           <p data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1">PRODUCTS</p>
           <h1 data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".5">The beauty of nature <br> is hidden in details.</h1>
-          <a data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".8" class="btn" href="{{ route('shop') }}">Shop Now</a>
+          <a data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".8" class="btn" href="{{ route('products.index') }}">Shop Now</a>
         </div>
       </div>
     </div>
@@ -91,19 +91,13 @@
 		</div>
 		<div class="row">
 
-            <x-product  name="Abcd" price="200"/>
-            <x-product />
-            <x-product />
-            <x-product />
-            <x-product />
-            <x-product />
-            <x-product />
-            <x-product />
-            <x-product />
-            <x-product />
-            <x-product />
-            <x-product />
-            <x-product />
+            @foreach ($products as $product)
+
+
+
+            <x-product  :name="$product->name" :price="$product->price" :id="$product->id" />
+            @endforeach
+
 			{{-- <div class="col-md-4">
 				<div class="product-item">
 					<div class="product-thumb">
@@ -315,7 +309,7 @@
 			</div> --}}
 
 		<!-- Modal -->
-		<div class="modal product-modal fade" id="product-modal">
+		{{-- <div class="modal product-modal fade" id="product-modal">
 			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 				<i class="tf-ion-close"></i>
 			</button>
@@ -336,14 +330,14 @@
 			        					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem iusto nihil cum. Illo laborum numquam rem aut officia dicta cumque.
 			        				</p>
 			        				<a href="{{ route('cart') }}" class="btn btn-main">Add To Cart</a>
-			        				<a href="{{ route('singleProduct') }}" class="btn btn-transparent">View Product Details</a>
+			        				<a href="{{ route('products.details') }}" class="btn btn-transparent">View Product Details</a>
 			        			</div>
 			        		</div>
 			        	</div>
 			        </div>
 		    	</div>
 		  	</div>
-		</div><!-- /.modal -->
+		</div><!-- /.modal --> --}}
 
 		</div>
 	</div>

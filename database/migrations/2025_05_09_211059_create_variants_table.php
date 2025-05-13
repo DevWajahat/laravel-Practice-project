@@ -11,8 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('products', function (Blueprint $table) {
-            $table->dropColumn('useless');
+        Schema::create('variants', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('attribute_id')->constrained('attributes');
+            $table->string('name');
+            $table->timestamps();
         });
     }
 
@@ -21,8 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('products', function (Blueprint $table) {
-            $table->dropColumn('useless');
-        });
+        Schema::dropIfExists('variants');
     }
 };

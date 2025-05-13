@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class checkoutController extends Controller
+class CheckoutController extends Controller
 {
     function index() {
         return view('screens.checkout.index');
