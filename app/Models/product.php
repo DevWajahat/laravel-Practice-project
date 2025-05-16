@@ -9,7 +9,9 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Product extends Model
 {
+
     protected $fillable = ['category_id', 'name', 'price', 'description'];
+
 
     public function category(): BelongsTo
     {
@@ -25,4 +27,10 @@ class Product extends Model
     {
         return $this->belongsToMany(Variant::class)->withTimestamps();
     }
+
+    public function carts(): BelongsToMany
+    {
+        return $this->belongsToMany(Cart::class);
+    }
+
 }

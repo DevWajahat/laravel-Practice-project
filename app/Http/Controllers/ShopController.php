@@ -24,11 +24,6 @@ class ShopController extends Controller
 
         $product = Product::find($id);
 
-        // dd($product->attributes[0]->variants);
-
-
-        // dd($productAttributes->attribute);
-
         return view('screens.products.details', get_defined_vars());
     }
 
@@ -80,7 +75,7 @@ class ShopController extends Controller
 
 
 
-   
+
 
 
 
@@ -102,6 +97,8 @@ class ShopController extends Controller
 
         return view('screens.products.update-product', get_defined_vars());
     }
+
+
 
     function updateProduct(Request $request)
     {

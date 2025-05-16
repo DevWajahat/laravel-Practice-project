@@ -108,17 +108,12 @@
                         </p>
 
 
-
-                        {{-- @dd($product->attributes[0]->variants) --}}
-
-
                         @foreach ($product->attributes as $attribute)
-                            {{-- @dd($product->variants) --}}
                             <div class="product-size">
                                 <span>{{ $attribute->name }}:</span>
                                 <select class="form-control">
-                                    @foreach ($attribute->variants as $variant)
-                                        @if ($product->variants->contains('id', $variant->id))
+                                    @foreach ($product->variants as $variant)
+                                        @if ($variant->attribute_id == $attribute->id)
                                             <option>{{ $variant->name }}</option>
                                         @endif
                                     @endforeach
@@ -126,32 +121,28 @@
                             </div>
                         @endforeach
 
-
-
-
-
-
-
-
-
-
-
-                        <div class="product-quantity">
-                            <span>Quantity:</span>
-                            <div class="product-quantity-slider">
-                                <input id="product-quantity" type="text" value="0" name="product-quantity">
-                            </div>
-                        </div>
                         <div class="product-category">
                             <span>Categories:</span>
                             <ul>
                                 <li><a
                                         href="{{ route('products.details', $product->id) }}">{{ $product->category->name }}</a>
                                 </li>
-                                {{-- <li><a href="{{ route('products.details') }}">Soap</a></li> --}}
                             </ul>
                         </div>
-                        <a href="{{ route('cart') }}" class="btn btn-main mt-20">Add To Cart</a>
+                        <form action="{{ route('cart.store', $product->id) }}" method="post">
+                            @csrf
+                            <div class="product-quantity">
+                                <span>Quantity:</span>
+                                <input type="hidden" value="{{ auth()->user()->id }}" name="user_id">
+                                <div class="product-quantity-slider">
+                                    <input id="product-quantity" type="number" value="1" min="1"
+                                        name="quantity">
+                                </div>
+                            </div>
+                            <input type="submit" class="btn btn-main mt-20" value="Add To Cart">
+
+                        </form>
+                        {{-- @dd($product->id) --}}
                     </div>
                 </div>
             </div>
@@ -173,7 +164,6 @@
                                 <div class="post-comments">
                                     <ul class="media-list comments-list m-bot-50 clearlist">
                                         <x-reviews />
-
                                     </ul>
                                 </div>
                             </div>

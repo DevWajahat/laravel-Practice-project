@@ -74,7 +74,59 @@
                   </div>
                </div>
             </div>
+
             <div class="col-md-4">
+                <h4>Order Summary</h4>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach ($carts as $cart)
+
+                            <tr>
+                                <th scope="row">x{{ $cart->quantity }}</th>
+                                <td>{{ $cart->name }}</td>
+                                <td>${{ $cart->quantity * $cart->product->price }}</td>
+
+
+
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Delivery</th>
+                                <td>${{ $delivery }}</td>
+                            </tr>
+                            <tr>
+                                 <th scope="row">Discount</th>
+                                 <td>0.00</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">Total</th>
+                                 <td>${{ $carts[0]->product->sum('price') }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+            </div>
+
+            {{-- <div class="col-md-4">
                <div class="product-checkout-details">
                   <div class="block">
                      <h4 class="widget-title">Order Summary</h4>
@@ -110,7 +162,7 @@
                      </div>
                   </div>
                </div>
-            </div>
+            </div> --}}
          </div>
       </div>
    </div>

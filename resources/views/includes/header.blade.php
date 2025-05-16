@@ -72,7 +72,7 @@
                                 <span class="total-price">$1799.00</span>
                             </div>
                             <ul class="text-center cart-buttons">
-                                <li><a href="{{ route('cart') }}" class="btn btn-small">View Cart</a></li>
+                                <li><a href="{{ route('cart.index') }}" class="btn btn-small">View Cart</a></li>
                                 <li><a href="{{ route('checkout') }}"
                                         class="btn btn-small btn-solid-border">Checkout</a></li>
                             </ul>
@@ -92,17 +92,19 @@
                         </ul>
                     </li><!-- / Search -->
 
-                    <!-- Languages -->
-                    <li class="commonSelect">
-                        <select class="form-control">
-                            <option>EN</option>
-                            <option>DE</option>
-                            <option>FR</option>
-                            <option>ES</option>
-                        </select>
-                    </li><!-- / Languages -->
+
                     <li>
-                        <a href="{{ route('add.product') }}">Create Product</a>
+                        @auth
+                            <a href="">{{ auth()->user()->name }}</a>
+                            <a href="{{ route('logout') }}">Logout</a>
+                        @else
+                            <a href="{{ route('login') }}">Login</a>
+                            <a href="{{ route('register') }}">Signup</a>
+                        @endauth
+
+
+
+                        {{-- <a href="">Logout</a> --}}
                         {{-- <a href="{{ route('update.products') }}">Update Product</a> --}}
                     </li><!-- / Languages -->
 
@@ -154,7 +156,7 @@
                                         <li role="separator" class="divider"></li>
                                         <li><a href="{{ route('products.index') }}">Shop</a></li>
                                         <li><a href="{{ route('checkout') }}">Checkout</a></li>
-                                        <li><a href="{{ route('cart') }}">Cart</a></li>
+                                        <li><a href="{{ route('cart.index') }}">Cart</a></li>
                                         <li><a href="{{ route('main.pricing') }}">Pricing</a></li>
                                         <li><a href="{{ route('confirmation') }}">Confirmation</a></li>
 
@@ -215,8 +217,8 @@
                                     <ul>
                                         <li class="dropdown-header">Utility</li>
                                         <li role="separator" class="divider"></li>
-                                        <li><a href="{{ route('signin') }}">Login Page</a></li>
-                                        <li><a href="{{ route('signup') }}">Signin Page</a></li>
+                                        <li><a href="">Login Page</a></li>
+                                        <li><a href="">Signin Page</a></li>
                                         <li><a href="forget-password.html">Forget Password</a></li>
                                     </ul>
                                 </div>

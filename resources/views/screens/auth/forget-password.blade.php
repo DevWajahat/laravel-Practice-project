@@ -18,7 +18,7 @@
               <button type="submit" class="btn btn-main text-center">Request password reset</button>
             </div>
           </form>
-          <p class="mt-20"><a href="{{ route('signin') }}">Back to log in</a></p>
+          <p class="mt-20"><a href="">Back to log in</a></p>
         </div>
       </div>
     </div>

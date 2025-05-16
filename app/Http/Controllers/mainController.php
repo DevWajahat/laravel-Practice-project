@@ -9,12 +9,11 @@ class MainController extends Controller
 {
     function index()
     {
-
         session(['brand' => 'AVIATO']);
 
-      $products =  Product::all();
+        $products =  Product::all();
 
-        return view('screens.main.index',get_defined_vars());
+        return view('screens.main.index', get_defined_vars());
     }
     function about()
     {

@@ -53,7 +53,7 @@
                                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem iusto nihil
                                                 cum. Illo laborum numquam rem aut officia dicta cumque.
                                             </p>
-                                            <a href="{{ route('cart') }}" class="btn btn-main">Add To Cart</a>
+                                            <a href="{{ route('cart.index') }}" class="btn btn-main">Add To Cart</a>
                                             <a href="" class="btn btn-transparent">View
                                                 Product Details</a>
                                         </div>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -10,7 +11,11 @@ class DashboardController extends Controller
            return view('screens.dashboard.index');
        }
        function profileDetails() {
-           return view('screens.dashboard.profile-details');
+
+        $users = User::first();
+        dd($users);
+
+           return view('screens.dashboard.profile-details',get_defined_vars());
        }
        function dashboard() {
            return view('screens.dashboard.dashboard');

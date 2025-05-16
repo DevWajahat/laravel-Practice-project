@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Cart;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class CartController extends Controller
@@ -10,15 +11,34 @@ class CartController extends Controller
     function index()
     {
 
+        $cart = Cart::find(1);
 
 
-       $carts = Cart::all();
+        dd($cart->user);
 
-        return view('screens.cart.index',compact('carts'));
+        return view('screens.cart.index', get_defined_vars());
     }
 
-       function store(Request $request) {
+    function store($id,Request $request)
+    {
 
-           return view('screens.cart.add-product');
-       }
+        $product = Product::find($id);
+
+            // dd($product->carts());
+
+            // dd($product->carts());
+            $product->carts()->create([
+
+            'quantity' => $request->quantity
+        ]);
+
+        return back();
+    }
+
+    public function destroy($id)
+    {
+         Cart::find($id)->delete();
+
+        return back();
+    }
 }

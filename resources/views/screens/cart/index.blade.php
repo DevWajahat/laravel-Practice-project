@@ -37,10 +37,10 @@
                                         </thead>
                                         <tbody>
 
-                                                <x-cart name="asus" price="23" />
 
-                                            {{-- <x-cart name="AirSpace" price="200.P00" remove="Remove" /> --}}
-                                            {{-- <x-cart name="Bingo" price="200.00" remove="Remove" /> --}}
+                                                <x-cart name="sdaf" price="2323" id="1" />
+                                              
+
 
                                         </tbody>
                                     </table>

@@ -1,6 +1,7 @@
 @props([
     'name',
-    'price'
+    'price',
+    'id'
 ])
 
 
@@ -13,6 +14,6 @@
     </td>
     <td class="">{{ $price }}</td>
     <td class="">
-        <a class="product-remove" href="#!"> remove </a>
+        <a class="product-remove" href="{{ route('cart.destroy',$id) }}"> remove </a>
     </td>
 </tr>

@@ -9,19 +9,26 @@
             <img src="images/logo.png" alt="">
           </a>
           <h2 class="text-center">Welcome Back</h2>
-          <form class="text-left clearfix" action="index.html" >
+          <form class="text-left clearfix" action="{{ route('login')}}" method="post" >
+            @csrf
             <div class="form-group">
-              <input type="email" class="form-control"  placeholder="Email">
+              <input type="email" value="{{ old('email') }}" class="form-control @error ('password') is-invalid @enderror" name="email"  placeholder="Email">
+              @error('email')
+                <div class="alert alert-danger">{{ $message }}</div>
+              @enderror
             </div>
             <div class="form-group">
-              <input type="password" class="form-control" placeholder="Password">
+              <input type="password" value="{{ old('password') }}" name="password" class="form-control @error ('password') is-invalid @enderror" placeholder="Password">
+              @error('password')
+                  <div class="alert alert-danger">{{ $message }}</div>
+              @enderror
             </div>
             <div class="text-center">
               <button type="submit" class="btn btn-main text-center" >Login</button>
             </div>
           </form>
-          <p><a href="{{ route('forgetpassword') }}"> Forgot your password?</a></p>
-          <p class="mt-20">New in this site ?<a href="{{ route('signup') }}"> Create New Account</a></p>
+          <p><a href=""> Forgot your password?</a></p>
+          <p class="mt-20">New in this site ?<a href="{{ route('register') }}"> Create New Account</a></p>
         </div>
       </div>
     </div>
