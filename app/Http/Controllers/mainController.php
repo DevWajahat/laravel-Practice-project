@@ -13,22 +13,22 @@ class MainController extends Controller
 
         $products =  Product::all();
 
-        return view('screens.main.index', get_defined_vars());
+        return view('screens.web.index', get_defined_vars());
     }
     function about()
     {
-        return view('screens.main.about');
+        return view('screens.web.about');
     }
     function contact()
     {
-        return view('screens.main.contact');
+        return view('screens.web.contact');
     }
     function faq()
     {
-        return view('screens.main.faq');
+        return view('screens.web.faq');
     }
     public function pricing()
     {
-        return view('screens.main.pricing');
+        return view('screens.web.pricing');
     }
 }

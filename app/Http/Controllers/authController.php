@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreLoginRequest;
 use App\Http\Requests\StoreRegisterRequest;
 use App\Http\Requests\StoreUserRequest;
+use App\Models\Cart;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -22,7 +23,12 @@ class AuthController extends Controller
         $user = User::create($request->sanitized());
         Auth::login($user);
 
-        if(Auth::check()){
+        if (Auth::check()) {
+            Cart::create([
+                'user_id' => auth()->user()->id,
+            ]);
+
+
             return redirect()->route('home');
         }
         return back();
@@ -58,7 +64,7 @@ class AuthController extends Controller
         $credentials = $request->sanitized();
 
 
-        if(Auth::attempt($credentials)){
+        if (Auth::attempt($credentials)) {
             return redirect()->route('home');
         }
 
@@ -66,7 +72,6 @@ class AuthController extends Controller
             'email' => 'The provided credentials do not match our records.',
 
         ])->onlyInput('email');
-
     }
 
 
@@ -75,14 +80,10 @@ class AuthController extends Controller
         return view('screens.auth.forget-password');
     }
 
-    public function auth(Request $request)
+    public function auth(Request $request) {}
+
+    public function logout()
     {
-
-
-
-    }
-
-    public function logout(){
 
         Auth::logout();
 

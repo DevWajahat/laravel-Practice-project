@@ -49,7 +49,7 @@ class User extends Authenticatable
         ];
     }
 
-    public function carts(): HasOne
+    public function cart(): HasOne
     {
         return $this->hasOne(Cart::class);
     }

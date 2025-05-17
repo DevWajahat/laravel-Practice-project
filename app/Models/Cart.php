@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Cart extends Model
 {
-    protected $fillable = ['user_id','quantity'];
+    protected $fillable = ['user_id','quantity','color',''];
 
 
     public function user():BelongsTo
@@ -19,7 +19,7 @@ class Cart extends Model
 
     public function products():BelongsToMany
     {
-        return $this->belongsToMany(Product::class);
+        return $this->belongsToMany(Product::class)->withTimestamps();
     }
 
 }

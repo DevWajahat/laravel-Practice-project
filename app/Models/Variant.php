@@ -19,7 +19,7 @@ class Variant extends Model
 
    public function products() : BelongsToMany
    {
-    return $this->belongsToMany(Product::class);
+    return $this->belongsToMany(Product::class)->withTimestamps();
    }
 
 }

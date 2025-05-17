@@ -98,6 +98,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="col-md-7">
                     <div class="single-product-details">
                         <h2>{{ $product->name }}</h2>
@@ -106,21 +107,6 @@
                         <p class="product-description mt-20">
                             {{ $product->description }}
                         </p>
-
-
-                        @foreach ($product->attributes as $attribute)
-                            <div class="product-size">
-                                <span>{{ $attribute->name }}:</span>
-                                <select class="form-control">
-                                    @foreach ($product->variants as $variant)
-                                        @if ($variant->attribute_id == $attribute->id)
-                                            <option>{{ $variant->name }}</option>
-                                        @endif
-                                    @endforeach
-                                </select>
-                            </div>
-                        @endforeach
-
                         <div class="product-category">
                             <span>Categories:</span>
                             <ul>
@@ -129,16 +115,32 @@
                                 </li>
                             </ul>
                         </div>
-                        <form action="{{ route('cart.store', $product->id) }}" method="post">
-                            @csrf
-                            <div class="product-quantity">
-                                <span>Quantity:</span>
-                                <input type="hidden" value="{{ auth()->user()->id }}" name="user_id">
-                                <div class="product-quantity-slider">
-                                    <input id="product-quantity" type="number" value="1" min="1"
-                                        name="quantity">
-                                </div>
-                            </div>
+
+
+  <form action="{{ route('cart.store', $product->id) }}" method="post">
+      @csrf
+      @foreach ($product->attributes as $attribute)
+          <div class="product-size">
+              <span>{{ $attribute->name }}:</span>
+              <select class="form-control" name="{{ $attribute->name }}">
+                  @foreach ($product->variants as $variant)
+                      @if ($variant->attribute_id == $attribute->id)
+                          <option name="">{{$variant->name}}</option>
+                      @endif
+                  @endforeach
+              </select>
+          </div>
+      @endforeach
+      <div class="product-quantity">
+          <span>Quantity:</span>
+          {{-- <input type="hidden" value="{{ auth()->user()->id }}" name="user_id"> --}}
+          <div class="product-quantity-slider">
+              <input id="product-quantity" type="number" value="1" min="1"
+                  name="quantity">
+          </div>
+      </div>
+
+
                             <input type="submit" class="btn btn-main mt-20" value="Add To Cart">
 
                         </form>

@@ -17,7 +17,6 @@
         </div>
     </section>
 
-
     {{-- @dd($cart) --}}
     <div class="page-wrapper">
         <div class="cart shopping">
@@ -31,15 +30,14 @@
                                         <thead>
                                             <tr>
                                                 <th class="">Item Name</th>
-                                                <th class="">Item Price</th>
+                                                <th class="">Color</th>
+                                                <th class="">Size</th>
                                                 <th class="">Actions</th>
                                             </tr>
                                         </thead>
                                         <tbody>
 
-
-                                                <x-cart name="sdaf" price="2323" id="1" />
-                                              
+                                            <x-cart name="asdf" color="fdas" size="X" id="1" />
 
 
                                         </tbody>

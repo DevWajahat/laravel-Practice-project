@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('cart_id')->constrained('carts');
             $table->foreignId('product_id')->constrained('products');
-            // $table->unique(['cart_id','product_id']);
+            $table->integer('quantity')->unsigned();
             $table->timestamps();
         });
     }
