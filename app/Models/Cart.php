@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Cart extends Model
 {
-    protected $fillable = ['user_id','quantity','color',''];
+    protected $fillable = ['user_id','quantity','color','size'];
 
 
     public function user():BelongsTo
@@ -19,7 +19,7 @@ class Cart extends Model
 
     public function products():BelongsToMany
     {
-        return $this->belongsToMany(Product::class)->withPivot('quantity','color','size')->withTimestamps();
+        return $this->belongsToMany(Product::class)->withPivot('quantity','color','size','id')->withTimestamps();
     }
 
 }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Cart;
+use App\Models\CartProduct;
 use App\Models\Product;
 use Illuminate\Container\Attributes\DB;
 use Illuminate\Http\Request;
@@ -31,8 +32,8 @@ class CartController extends Controller
     // Check krega ke product pehle se hi exist krta hai bhi ke nhi
     $existing = $cart->products()
         ->where('product_id', $id)
-        ->wherePivot('color', $request->Color)
-        ->wherePivot('size', $request->Size)
+        ->wherePivot('color', $request->color)
+        ->wherePivot('size', $request->size)
         ->first();
 
     if ($existing) {
@@ -44,8 +45,8 @@ class CartController extends Controller
         // wrna naya product add krdega
         $cart->products()->attach($id, [
             'quantity' => $request->quantity,
-            'color' => $request->Color,
-            'size' => $request->Size,
+            'color' => $request->color,
+            'size' => $request->size,
         ]);
     }
 
@@ -55,12 +56,14 @@ class CartController extends Controller
 
     public function destroy($id)
     {
-        $product = Product::find($id);
+        // $product = Product::find($id)->first;
+
 
         $cart = Cart::where('user_id',auth()->id())->first();
-
-        $cart->products()->detach($id);
-
+        $productId = $id - 1;
+        // dd($cart->products[0]->pivot->id);
+        $cartProducts = CartProduct::find($id);
+        $cartProducts->delete();
         return back();
     }
 }

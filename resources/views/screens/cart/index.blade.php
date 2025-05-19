@@ -32,13 +32,14 @@
                                                 <th class="">Item Name</th>
                                                 <th class="">Color</th>
                                                 <th class="">Size</th>
+                                                <th class="">Quantity</th>
                                                 <th class="">Actions</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             @foreach ($cart->products as $product)
                                                 <x-cart :name="$product->name" :color="$product->pivot->color" :size="$product->pivot->size"
-                                                    :id="$product->id" />
+                                                    :id="$product->pivot->id" :quantity="$product->pivot->quantity" />
                                             @endforeach
 
                                         </tbody>

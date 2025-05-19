@@ -38,7 +38,7 @@ Route::get('checkout', [checkoutController::class, 'index'])->name('checkout');
 Route::prefix('cart/')->name('cart.')->controller(cartController::class)->group(function () {
     Route::get('/', 'index')->middleware('auth')->name('index');
     Route::post('/store/{id}/', 'store')->name('store');
-    Route::get('/destroy/{id}', 'destroy')->name('destroy');
+    Route::get('/destroy/{id}/', 'destroy')->name('destroy');
 });
 
 Route::get('confirmation', [checkoutController::class, 'confirmation'])->name('confirmation');

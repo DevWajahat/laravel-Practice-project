@@ -2,7 +2,8 @@
     'name',
     'color',
     'size',
-    'id'
+    'id',
+    'quantity'
 ])
 
 
@@ -15,6 +16,7 @@
     </td>
     <td class="">{{ $color }}</td>
     <td class="">{{ $size }}</td>
+    <td class="">{{ $quantity }}</td>
     <td class="">
         <a class="product-remove" href="{{ route('cart.destroy',$id) }}"> remove </a>
     </td>
