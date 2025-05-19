@@ -24,10 +24,6 @@ class AuthController extends Controller
         Auth::login($user);
 
         if (Auth::check()) {
-            Cart::create([
-                'user_id' => auth()->user()->id,
-            ]);
-
 
             return redirect()->route('home');
         }

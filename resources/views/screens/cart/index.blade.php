@@ -36,9 +36,10 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-
-                                            <x-cart name="asdf" color="fdas" size="X" id="1" />
-
+                                            @foreach ($cart->products as $product)
+                                                <x-cart :name="$product->name" :color="$product->pivot->color" :size="$product->pivot->size"
+                                                    :id="$product->id" />
+                                            @endforeach
 
                                         </tbody>
                                     </table>
