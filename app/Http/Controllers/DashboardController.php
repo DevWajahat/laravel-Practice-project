@@ -13,7 +13,7 @@ class DashboardController extends Controller
        function profileDetails() {
 
         $users = User::first();
-        dd($users);
+        // dd($users);
 
            return view('screens.dashboard.profile-details',get_defined_vars());
        }

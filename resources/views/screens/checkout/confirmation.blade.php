@@ -2,7 +2,9 @@
 
 @section('content')
 <!-- Page Wrapper -->
+
 <x-alert type="success" message="Payment Confirmed"></x-alert>
+
 
 <section class="page-wrapper success-msg">
   <div class="container">
