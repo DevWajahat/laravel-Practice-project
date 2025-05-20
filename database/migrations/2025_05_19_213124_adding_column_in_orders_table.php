@@ -11,8 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('order_product', function (Blueprint $table) {
-            $table->string('full_name', 255)->after('total_price');
+        Schema::table('orders', function (Blueprint $table) {
+            $table->string('full_name', 255)->after('total_amount');
             $table->text('address')->after('full_name');
             $table->integer('zip_code')->after('address');
             $table->string('city')->after('zip_code');
@@ -25,12 +25,12 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('order_product', function (Blueprint $table) {
-            $table->dropColumn('full_name', 255);
-            $table->dropColumn('address');
-            $table->dropColumn('zip_code');
-            $table->dropColumn('city');
-            $table->dropColumn('country');
+        Schema::table('orders', function (Blueprint $table) {
+            $table->string('full_name', 255);
+            $table->text('address');
+            $table->integer('zip_code');
+            $table->string('city');
+            $table->string('country');
         });
     }
 };

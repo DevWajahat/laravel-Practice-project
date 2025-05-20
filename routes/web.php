@@ -52,15 +52,18 @@ Route::prefix('dashboard')->name('dashboard.')->controller(DashboardController::
     Route::get('/', 'index')->name('index');
     Route::get('orders', 'orders')->name('orders');
     Route::get('address', 'address')->name('address');
+    Route::get('/orders/details/{id}', 'orderDetails')->name('orders.details');
     Route::get('profile/details', 'profileDetails')->name('profileDetails');
 });
 
-Route::get('/register',[AuthController::class, 'register_view'])->middleware('guest')->name('register');
-Route::post('/register',[AuthController::class, 'register']);
+Route::post('checkout/store', [CheckoutController::class, 'store'])->name('checkout.store');
 
-Route::get('/login',[AuthController::class, 'login_view'])->middleware('guest')->name('login');
-Route::post('/login',[AuthController::class, 'login']);
-Route::get('/logout',[AuthController::class, 'logout'])->name('logout');
+Route::get('/register', [AuthController::class, 'register_view'])->middleware('guest')->name('register');
+Route::post('/register', [AuthController::class, 'register']);
+
+Route::get('/login', [AuthController::class, 'login_view'])->middleware('guest')->name('login');
+Route::post('/login', [AuthController::class, 'login']);
+Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::get('purchaseconfirmation', function () {
     return view('screens.checkout.purchase-confirmation');

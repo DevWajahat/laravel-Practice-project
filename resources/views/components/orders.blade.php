@@ -1,8 +1,18 @@
+@props([
+    'id',
+    'date',
+    'items' ,
+    'total' ,
+    'status',
+    'orderid'
+])
+
+
 <tr>
-    <td>#451231</td>
-    <td>Mar 25, 2016</td>
-    <td>2</td>
-    <td>$99.00</td>
-    <td><span class="label label-primary">Processing</span></td>
-    <td><a href="order.html" class="btn btn-default">View</a></td>
+    <td>#{{ $id }}</td>
+    <td>{{ $date }}</td>
+    <td>{{ $items }}</td>
+    <td>${{ $total }}</td>
+    <td><span class="label label-primary">{{ $status }}</span></td>
+    <td><a href="{{ route('dashboard.orders.details',$orderid) }}" class="btn btn-default">View</a></td>
 </tr>

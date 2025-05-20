@@ -23,34 +23,62 @@
                     <div class="col-md-8">
                         <div class="block billing-details">
                             <h4 class="widget-title">Billing Details</h4>
-                            <form class="checkout-form">
+                            <form class="checkout-form" method="POST" action="{{ route('checkout.store') }}">
+                                @csrf
                                 <div class="form-group">
                                     <label for="full_name">Full Name</label>
-                                    <input type="text" class="form-control" id="full_name" placeholder="">
+                                    <input type="text" class="form-control @error('full_name') is-invalid @enderror" name="full_name" value="{{ old('full_name') }}" id="full_name"
+                                        placeholder="">
+                                    @error('full_name')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
+
                                 </div>
+
                                 <div class="form-group">
                                     <label for="user_address">Address</label>
-                                    <input type="text" class="form-control" id="user_address" placeholder="">
+                                    <input type="text" class="form-control @error('address') is-invalid @enderror" name="address" value="{{ old('address') }}" id="address" placeholder="">
+
+                                    @error('address')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
+
                                 <div class="checkout-country-code clearfix">
+
                                     <div class="form-group">
                                         <label for="user_post_code">Zip Code</label>
-                                        <input type="text" class="form-control" id="user_post_code" name="zipcode"
+                                        <input type="text" class="form-control @error('zip_code') is-invalid @enderror" id="user_post_code" value="{{ old('zip_code') }}" name="zip_code"
                                             value="">
+
+                                            @error('zip_code')
+                                            <div class="alert alert-danger">{{ $message }}</div>
+                                            @enderror
                                     </div>
+
                                     <div class="form-group">
                                         <label for="user_city">City</label>
-                                        <input type="text" class="form-control" id="user_city" name="city"
+                                        <input type="text" class="form-control @error('city') is-inavlid @enderror" value="{{ old('city') }}" id="user_city" name="city"
                                             value="">
+                                            @error('city')
+                                            <div class="alert alert-danger">{{ $message }}</div>
+                                            @enderror
                                     </div>
                                 </div>
+
                                 <div class="form-group">
                                     <label for="user_country">Country</label>
-                                    <input type="text" class="form-control" id="user_country" placeholder="">
+                                    <input type="text" class="form-control @error('country') is-invalid @enderror" id="user_country" value="{{ old('country') }}" name="country"
+                                        placeholder="">
+                                        @error('country')
+                                        <div class="alert alert-danger">{{ $message }}</div>
+                                        @enderror
                                 </div>
+
+                                <input type="submit" class="btn btn-main mt-20" value="Place Order">
                             </form>
                         </div>
-                        <div class="block">
+                        {{-- <div class="block">
                             <h4 class="widget-title">Payment Method</h4>
                             <p>Credit Cart Details (Secure payment)</p>
                             <div class="checkout-product-details">
@@ -73,12 +101,12 @@
                                                 <input id="card-cvc" class="form-control" type="tel" maxlength="4"
                                                     placeholder="CVC">
                                             </div>
-                                            <a href="{{ route('confirmation') }}" class="btn btn-main mt-20">Place Order</a>
+
                                         </form>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
 
                     <div class="col-md-4">
@@ -98,7 +126,7 @@
                                         <td style="white-space: nowrap">{{ $product->name }}</td>
                                         <td>{{ $product->pivot->color }}</td>
                                         <td>{{ $product->pivot->size }}</td>
-                                        <td>${{$product->pivot->quantity * $product->price }}</td>
+                                        <td>${{ $product->pivot->quantity * $product->price }}</td>
                                     </tr>
                                 @endforeach
                             </tbody>
@@ -122,7 +150,7 @@
 
                                 <tr>
                                     <th scope="row">Total</th>
-                                    <td>${{ $subTotal}}</td>
+                                    <td>${{ $subTotal }}</td>
                                 </tr>
                             </tbody>
                         </table>

@@ -26,7 +26,7 @@
                         <li><a href="{{ route('dashboard.address') }}">Address</a></li>
                         <li><a class="active" href="{{ route('dashboard.profileDetails') }}">Profile Details</a></li>
                     </ul>
-                    @foreach ($users as $user)
+
                         <div class="dashboard-wrapper dashboard-user-profile">
                             <div class="media">
                                 <div class="pull-left text-center" href="#!">
@@ -42,16 +42,14 @@
 
                                         <li><span>Phone:</span>{{ $user->phone_no }}</li>
                                         <li><span>Password:</span>******</li>
-                                        <li><a class="btn btn-warning" href="">Edit</a>
-                                        </li>
-                                        <li><a class="btn btn-danger"
-                                                href="{{ route('user.destroy', $user->id) }}">delete</a></li>
+                                        
+
                                         {{-- <li><span>Date of Birth:</span>Dec , 22 ,1991</li> --}}
                                     </ul>
                                 </div>
                             </div>
                         </div>
-                    @endforeach
+
 
                 </div>
             </div>
