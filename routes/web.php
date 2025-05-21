@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\authController;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\cartController;
 use App\Http\Controllers\checkoutController;
@@ -9,6 +9,12 @@ use App\Http\Controllers\mainController;
 use App\Http\Controllers\MainController as ControllersMainController;
 use App\Http\Controllers\PricingController;
 use App\Http\Controllers\ShopController;
+use App\Models\User;
+use Illuminate\Support\Str;
+use Illuminate\Auth\Events\PasswordReset;
+use Illuminate\Http\Client\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Password;
 use Illuminate\Support\Facades\Route;
 use PHPUnit\Framework\Attributes\Group;
 
@@ -50,7 +56,7 @@ Route::prefix('blogs')->name('blogs.')->controller(BlogController::class)->group
 
 Route::prefix('dashboard')->name('dashboard.')->controller(DashboardController::class)->group(function () {
     Route::get('/', 'index')->name('index');
-    Route::get('orders', 'orders')->name('orders');
+    Route::get('orders', 'orders')->middleware('auth')->name('orders');
     Route::get('address', 'address')->name('address');
     Route::get('/orders/details/{id}', 'orderDetails')->name('orders.details');
     Route::get('profile/details', 'profileDetails')->name('profileDetails');
@@ -60,6 +66,20 @@ Route::post('checkout/store', [CheckoutController::class, 'store'])->name('check
 
 Route::get('/register', [AuthController::class, 'register_view'])->middleware('guest')->name('register');
 Route::post('/register', [AuthController::class, 'register']);
+
+// Route::get('/forgot-password', [AuthController::class, 'forgetpassword'])->middleware('guest')->name('password.request');
+// Route::get('/forgot-password', [AuthController::class, 'forgotpassword'])->middleware('guest')->name('password.email');
+
+
+Route::prefix('forgot-password')->name('password.')->controller(AuthController::class)->group(function () {
+    Route::get('/', 'forgotPasswordView')->name('request');
+    Route::post('/', 'forgotpasswordPost')->middleware('guest')->name('email');
+});
+
+Route::prefix('reset-password/')->name('password.')->controller(AuthController::class)->group(function () {
+    Route::get('/view/{token}', 'resetpasswordView')->middleware('guest')->name('reset');
+    Route::post('/','resetpassword')->middleware('guest')->name('update');
+});
 
 Route::get('/login', [AuthController::class, 'login_view'])->middleware('guest')->name('login');
 Route::post('/login', [AuthController::class, 'login']);

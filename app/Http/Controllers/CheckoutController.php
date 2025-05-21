@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\OrderShipped;
 use App\Http\Requests\OrderStoreRequest;
 use App\Models\Cart;
 use App\Models\CartProduct;
@@ -64,6 +65,7 @@ class CheckoutController extends Controller
             'country' => $request->country,
             'status' => 'pending',
         ]);
+        event(new OrderShipped($order));
 
         foreach ($cartProducts as $product) {
 
@@ -76,9 +78,14 @@ class CheckoutController extends Controller
                     'total_price' => $product->pivot->quantity * $product->price,
                 ]
             ]);
+
+
             $cart->products()->detach();
             $cart->delete();
         }
+
+
+
         return redirect()->route('confirmation');
     }
 }

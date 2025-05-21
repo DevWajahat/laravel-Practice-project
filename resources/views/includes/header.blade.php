@@ -219,7 +219,7 @@
                                         <li role="separator" class="divider"></li>
                                         <li><a href="">Login Page</a></li>
                                         <li><a href="">Signin Page</a></li>
-                                        <li><a href="forget-password.html">Forget Password</a></li>
+                                        <li><a href="{{ route('password.request') }}">Forget Password</a></li>
                                     </ul>
                                 </div>
 

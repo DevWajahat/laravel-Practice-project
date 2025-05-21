@@ -40,6 +40,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    
                                     @foreach (auth()->user()->orders as $order)
 
                                     {{-- @dd($order->products) --}}
