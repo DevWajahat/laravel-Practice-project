@@ -15,7 +15,7 @@
     });
   });
 
-  
+
   // Instagram Feed
   if (($('#instafeed').length) !== 0) {
     var accessToken = $('#instafeed').attr('data-accessToken');
@@ -95,3 +95,10 @@
 
 
 })(jQuery);
+
+
+$(document).ready(function() {
+  $(".notification-drop .item").on('click',function() {
+    $(this).find('ul').toggle();
+  });
+});

@@ -13,6 +13,7 @@ use App\Mail\UserRegistrationMailSend;
 use App\Models\Cart;
 use App\Models\PasswordResetToken;
 use App\Models\User;
+use App\Notifications\UserRegisteredNotification;
 use Carbon\Carbon;
 use Illuminate\Auth\Events\PasswordResetLinkSent;
 use Illuminate\Http\Request;
@@ -33,8 +34,12 @@ class AuthController extends Controller
     {
         $user = User::create($request->sanitized());
         event(new UserRegistered($user));
+        if ($user->role == 'admin') {
+            Auth::login($user);
+            return redirect()->route('admin.index');
+        }
         Auth::login($user);
-        return back();
+        return redirect()->route('home');
     }
 
     public function edit($id)
@@ -67,7 +72,15 @@ class AuthController extends Controller
         $credentials = $request->sanitized();
 
 
+
         if (Auth::attempt($credentials)) {
+
+            $role = auth()->user()->role;
+
+            if($role == 'admin'){
+                return redirect()->route('admin.index');
+            }
+
             return redirect()->route('home');
         }
 
@@ -82,9 +95,7 @@ class AuthController extends Controller
 
     public function logout()
     {
-
         Auth::logout();
-
         return back();
     }
 

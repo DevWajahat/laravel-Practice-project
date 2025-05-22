@@ -28,8 +28,8 @@
                 </div>
             </div>
             <div class="col-md-4 col-xs-12 col-sm-4">
-                <!-- Cart -->
                 <ul class="top-menu text-right list-inline">
+                    <!-- Cart -->
                     <li class="dropdown cart-nav dropdown-slide">
                         <a href="#!" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"><i
                                 class="tf-ion-android-cart"></i>Cart</a>
@@ -95,6 +95,9 @@
 
                     <li>
                         @auth
+
+                            <a href="{{ route('notification') }}">Notify</a>
+
                             <a href="">{{ auth()->user()->name }}</a>
                             <a href="{{ route('logout') }}">Logout</a>
                         @else

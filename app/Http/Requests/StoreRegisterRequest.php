@@ -33,6 +33,7 @@ class StoreRegisterRequest extends FormRequest
     {
         return [
             'name' => $this->name,
+            'role' => $this->role,
             'email' => $this->email,
             'password' => $this->password,
             'phone_no' => $this->phone_no

@@ -39,6 +39,7 @@
   <!-- Slick Carousel -->
   <link rel="stylesheet" href="{{ asset('assets/web/plugins/slick/slick.css') }}">
   <link rel="stylesheet" href="{{ asset('assets/web/plugins/slick/slick-theme.css') }}">
+  
 
   <!-- Remix Icon -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
